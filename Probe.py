@@ -1,15 +1,16 @@
-# file_name = 'Статья.doc'
-# file = open(file_name, mode='r', encoding='utf8')
-# file_content = file.read()
-# #file.write(file_content)
-# file.close()t
-# #file_content.decode('utf8')
-from pprint import pprint
+# def string_to_int(s): # добавить обработку ValueError
+#    return int(s)
+# def read_file(filename): # добавить обработку FileNotFoundError, IOError
+# with open(filename, 'r') as file:
+#    return file.read()
+# def divide_numbers(a, b): # добавить обработку ZeroDivisionError, TypeError
+#     return a / b
+# def access_list_element(lst, index): # добавить обработку IndexError, TypeError
+#    return lst[index]
 
-# text = open('one.txt', 'rb')
-# ooo = text.read()
-# pprint(ooo)
-
-text = open('one.txt', 'r')
-print(text.read(2))
-print(text.tell())
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    x = 0
+print("Деление на ноль! Установлено значение x равное 0.")
+print(x)
