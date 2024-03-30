@@ -1,12 +1,15 @@
+# Понадобится генератор чисел
 import random
+
+# Создаем исключение № 1
 class incorrect_age(Exception):
     def __init__(self, age):
         print(f'Возраст {age} не соответствует нашим требованиям')
 
+# Создаем исключение № 2
 class incorrect_status(Exception):
     def __init__(self):
         print('Нам семейные не интересны')
-
 
 def welcome():
     print('Hello!')
@@ -27,8 +30,7 @@ except incorrect_age:
     print(f'Еще раз - возраст не соответствует нашим требованиям!')
 except incorrect_status:
     print('Еще раз - нам семейные не интересны!')
-except NameError:
-    print('Значит, не дошли до генерации пароля')
+
 
 
 password = input('Введите ваш разовый пароль для входа:   ')
