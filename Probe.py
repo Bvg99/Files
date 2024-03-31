@@ -1,16 +1,23 @@
-# def string_to_int(s): # добавить обработку ValueError
-#    return int(s)
-# def read_file(filename): # добавить обработку FileNotFoundError, IOError
-# with open(filename, 'r') as file:
-#    return file.read()
-# def divide_numbers(a, b): # добавить обработку ZeroDivisionError, TypeError
-#     return a / b
-# def access_list_element(lst, index): # добавить обработку IndexError, TypeError
-#    return lst[index]
+# import requests
+import warnings
 
-try:
-    x = 10 / 0
-except ZeroDivisionError:
-    x = 0
-print("Деление на ноль! Установлено значение x равное 0.")
-print(x)
+# url = 'http://tomskrts.ru'
+# data = requests.get(url)
+# print(data.text)
+
+def my_func():
+    try:
+        print('Перед генерацией предупреждения')
+        warnings.warn('Это важное предупреждение', UserWarning)
+        print('После генерации предупреждения')
+    except UserWarning as e:
+        print(f'Предупреждение было перехвачено как исключение: {e}')
+
+# print('Пример 1: Фильтр Error')
+# warnings.simplefilter('error', UserWarning)
+# my_func()
+# print('\n')
+
+print('Пример 2: Фильтр Default')
+warnings.simplefilter('default', UserWarning)
+my_func()
