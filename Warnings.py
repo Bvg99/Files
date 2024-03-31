@@ -15,5 +15,5 @@ warnings.simplefilter('error') # Превращает предупреждени
 #warnings.simplefilter('ignore') # Блокирует печать предупреждения
 #warnings.simplefilter('always') # Всегда печатает соответствующее предупреждение
 
-density(5, 0.0001)
+density(5, 0.002)
 print('Calculation is OK')
